@@ -64,10 +64,56 @@ This repository contains:
 
 ## Screenshots
 
-To be added.
+# Azure Resource Deployment
+
+This project involves the creation and management of Azure resources, including a Web Application and a SQL Database. The resources are created and configured using the Azure CLI and PowerShell.
+
+## Section 1: Create a Web Application using Azure CLI
+
+The first part of the assignment was to develop a .NET web API application and publish its code into a Git repository. The web application was then deployed on Azure.
+
+### Resource Group
+
+A resource group was created to serve as the central container for all the resources, services, and components involved in the project.
+
+![Resource Group]([images/Azure_RG.png](https://github.com/kilmarzo/Deploying-secure-Azure-resources/blob/main/Azure_RG.png))
+
+### App Service Plan
+
+An App Service Plan was created and configured to support web hosting.
+
+![App Service Plan]([images/Azure_Serviceplan.png](https://github.com/kilmarzo/Deploying-secure-Azure-resources/blob/main/Azure_Serviceplan.png))
+
+### Web App
+
+A Web App was created within the previously configured Web Server and the .NET web API was deployed to this Web App.
+
+![Web App]([images/Azure_Webapp.png](https://github.com/kilmarzo/Deploying-secure-Azure-resources/blob/main/Azure_Webapp.png))
+
+## Section 2: Create an Azure SQL Database & Secure it with a Firewall using Azure PowerShell
+
+A SQL Database Server was created and protected with an admin username/password. The server was then secured with a firewall rule to allow access from any source. A database was created within the SQL Database Server to maintain tables and organize data.
+
+### SQL Server
+
+The SQL Server was created with necessary configurations.
+
+![SQL Server]([images/Azure_SQLserver.png](https://github.com/kilmarzo/Deploying-secure-Azure-resources/blob/main/Azure_SQLserver.png))
+
+### SQL Database Login
+
+Access to the database was secured with an admin login.
+
+![SQL Database Login]([images/Azure_SQLdatabaselogin.png](https://github.com/kilmarzo/Deploying-secure-Azure-resources/blob/main/Azure_SQLdatabaselogin.png))
+
+### SQL Database Firewall
+
+A firewall rule was set up to connect and access the Azure SQL database from any source.
+
+![SQL Database Firewall]([images/Azure_SQLdatabasefirewall.png](https://github.com/kilmarzo/Deploying-secure-Azure-resources/blob/main/Azure_SQLdatabasefirewall.png))
+
 
 ---
 
-Just replace "To be added" with the actual screenshots once you upload them to your repository. You can do this by using Markdown's syntax for images, which is `![Description](url)`, replacing `url` with the actual URL to the image file in your repository.
-
-I hope this helps! If you have any other questions, feel free to ask.
+Author: Said el Kacimi
+Special thanks to Mr. Mirzaei and Mr. Mohanand for their help in my assignment.
