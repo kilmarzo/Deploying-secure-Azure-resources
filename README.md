@@ -82,13 +82,13 @@ A resource group was created to serve as the central container for all the resou
 
 An App Service Plan was created and configured to support web hosting.
 
-![App Service Plan]([images/Azure_Serviceplan.png](https://github.com/kilmarzo/Deploying-secure-Azure-resources/blob/main/Azure_Serviceplan.png))
+![App Service Plan](Azure_Serviceplan.png)
 
 ### Web App
 
 A Web App was created within the previously configured Web Server and the .NET web API was deployed to this Web App.
 
-![Web App]([images/Azure_Webapp.png](https://github.com/kilmarzo/Deploying-secure-Azure-resources/blob/main/Azure_Webapp.png))
+![Web App](Azure_Webapp.png)
 
 ## Section 2: Create an Azure SQL Database & Secure it with a Firewall using Azure PowerShell
 
@@ -98,19 +98,19 @@ A SQL Database Server was created and protected with an admin username/password.
 
 The SQL Server was created with necessary configurations.
 
-![SQL Server]([images/Azure_SQLserver.png](https://github.com/kilmarzo/Deploying-secure-Azure-resources/blob/main/Azure_SQLserver.png))
+![SQL Server](Azure_SQLserver.png)
 
 ### SQL Database Login
 
 Access to the database was secured with an admin login.
 
-![SQL Database Login]([images/Azure_SQLdatabaselogin.png](https://github.com/kilmarzo/Deploying-secure-Azure-resources/blob/main/Azure_SQLdatabaselogin.png))
+![SQL Database Login](Azure_SQLdatabaselogin.png)
 
 ### SQL Database Firewall
 
 A firewall rule was set up to connect and access the Azure SQL database from any source.
 
-![SQL Database Firewall]([images/Azure_SQLdatabasefirewall.png](https://github.com/kilmarzo/Deploying-secure-Azure-resources/blob/main/Azure_SQLdatabasefirewall.png))
+![SQL Database Firewall](Azure_SQLdatabasefirewall.png)
 
 
 ---
