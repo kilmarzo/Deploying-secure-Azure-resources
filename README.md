@@ -1,7 +1,3 @@
-Certainly! Here's a sample README that includes the commands you provided and the assignment details:
-
----
-
 # Azure Resources Deployment Assignment
 
 The purpose of this assignment is to gain hands-on experience in creating Azure resources using shell-based tools and to secure the created resources through Azure Active Directory.
