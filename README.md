@@ -76,7 +76,7 @@ The first part of the assignment was to develop a .NET web API application and p
 
 A resource group was created to serve as the central container for all the resources, services, and components involved in the project.
 
-![Resource Group]([images/Azure_RG.png](https://github.com/kilmarzo/Deploying-secure-Azure-resources/blob/main/Azure_RG.png))
+![Resource Group](Azure_RG.png)
 
 ### App Service Plan
 
