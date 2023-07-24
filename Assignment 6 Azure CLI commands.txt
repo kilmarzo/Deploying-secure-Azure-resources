@@ -1,0 +1,59 @@
+
+
+
+# Define your variables
+$workload = "azure-assignment"
+$environment = "prod"
+$region = "norwayeast"
+
+
+# Generate a unique string
+$unique_string = -join ((65..90) + (97..122) | Get-Random -Count 6 | % {[char]$_})
+
+# Construct your resource group name
+rg_name="rg-${workload}-${environment}-${region}-${unique_string}"
+
+# Create the resource group
+az group create --name $rg_name --location $region
+
+# Define your app service plan name
+$appServicePlanName = "asp-$($workload)-$($environment)-$($region)-$($unique_string)"
+
+# Create an App Service Plan with a unique name in the free tier (F1)
+az appservice plan create --name $appServicePlanName --resource-group $rg_name --sku FREE
+
+# Define your web app name
+$webAppName = "webapp-$($workload)-$($environment)-$($region)-$($unique_string)"
+
+# Create a web app
+az webapp create --name $webAppName --resource-group $rg_name --plan $appServicePlanName
+
+# Configure continuous deployment from your GitHub repository:
+az webapp deployment source config --name webapp-azure-assignment-prod-norwayeast-UbufkP --resource-group rg-azure-assignment-prod-norwayeast-UbufkP --repo-url https://github.com/kilmarzo/Deploying-secure-Azure-resources --branch main --manual-integration
+
+$serverName = "<server-name>" # The globally unique name for your SQL Server instance
+$location = "norwayeast" # The location/region where the SQL Server will be created
+$adminSqlLogin = "<admin-username>" # The admin username for the SQL Server
+$password = "<admin-password>" # The admin password for the SQL Server
+$databaseName = "<database-name>" # The name of the database that you will create on the server
+
+$unique_string = Get-Random -Minimum 100 -Maximum 999
+
+# For the server name, use a combination of the workload, environment, region, and a unique string
+$serverName = "sqlsrv-${workload}-${environment}-${region}-${unique_string}" # Example: sqlsrv-azure-assignment-prod-norwayeast-001
+
+# Define the admin login
+$adminSqlLogin = "admin-${workload}-${environment}-${region}-${unique_string}" # Example: admin-azure-assignment-prod-norwayeast-001
+admin-Said-El-Kacimi
+
+# Define the password (make sure to follow Azure's complexity requirements)
+$password = "<your-admin-password>" # Replace this with your actual password
+Whitebeard1000!
+
+# For the database name, use a combination of the workload, environment, region, and a unique string
+$databaseName = "sqldb-${workload}-${environment}-${region}-${unique_string}" # Example: sqldb-azure-assignment-prod-norwayeast-001
+
+# Firewall rule to allow all incoming connections
+az sql server firewall-rule create --resource-group $rg_name --server $serverName -n AllowAll --start-ip-address 0.0.0.0 --end-ip-address 255.255.255.255
+
+
